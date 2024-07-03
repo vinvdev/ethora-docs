@@ -1,5 +1,6 @@
 {
-    "index": "Getting Started",
-    "float-chat": "Floating Chat Button",
+    "index": "Overview",
+    "start": "Getting Started",
+    "float-chat": "Floating Button",
     "native-app": "React Native Mobile App"
 }
