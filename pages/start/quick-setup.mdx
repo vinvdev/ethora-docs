@@ -1,30 +1,100 @@
+import Image from 'next/image'
+ 
 # Chat Widget
 
 ## Introduction
 
-We have built this engine so you can focus on your core business and growing your community.
-You don’t have to spend months/years on building the foundation tech anymore.
-Features such as tokenization, messaging & push notifications, API and web3 infrastructure come packed as part of the engine.
-You can easily enable or disable the features and mechanics depending on your current needs.
+The **ethora-chat-component** npm package addresses these needs. With just a few lines of code, you can quickly set up a lightweight version of the Ethora chat room functionality. Future updates will enhance the chat component, and we plan to introduce additional npm packages for Digital Wallet and AI functionalities.
 
 ## Prerequisites
 
-To integrate the chat widget in your web app, you'll need the following:
+Before you get started with the **ethora-chat-component**, ensure you have the following:
 
-1. [Ethora](https://www.ethora.com/) account
-2. Basic understanding of ReactJS
-3. A web app to integrate chat widget into
+- **Node.js** and **npm** installed on your machine. You can download and install them from [Node.js official website](https://nodejs.org/).
 
-## Install Ethora widget
+## Using Ethora Chat Component
+### Alpha version 24.07.03
+Follow these steps to set up a new project and integrate the **ethora-chat-component**:
 
-To get started, install ```@ethora-chat/react``` along with the regular ```@ethora``` package:
+1. Create a new Vite project:
+   
+   ```sh copy
+   npm create vite@latest
+   ```
 
-```sh npm2yarn
-npm i ethora-chat
-```
+2. Select the project name and type (React/JavaScript) during the setup prompts.
 
-## Configuring Widget
+3. Navigate to the project directory:
 
-## Backend Setup
+    ```sh copy
+    cd project-name
+    ```
 
-## Integration
+4. Install the project dependencies:
+
+    ```sh copy
+    npm install
+    ```
+
+5. Install the ethora-chat-component package:
+
+    ```sh copy
+    npm i projecet-2-ccomp
+    ```
+
+6. Open the `src/App.tsx` file and replace its content with the following code:
+
+    ```jsx copy showLineNumbers {1-2,9} filename="src/App.tsx"
+    import { ChatWrapper as Chat } from "projecet-2-ccomp";
+    import { store } from "projecet-2-ccomp";
+    import { Provider } from "react-redux";
+    import "./App.css";
+
+    function App() {
+        return (
+        <Provider store={store}>
+        <Chat MainComponentStyles={{ width: "100%" }} />
+        </Provider>
+        );
+    }
+
+    export default App;
+    ```
+
+## Configuring Widget Styles
+
+7. For styling you can alter `App.css`
+
+    ```css copy filename="src/App.css"
+    #root {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    }
+    ```
+
+    ```css copy filename="src/index.css"
+    body {
+    margin: 0;
+    display: flex;
+    place-items: center;
+    min-width: 320px;
+    min-height: 100vh;
+    width: 100%;
+    }
+    ```
+
+8. Run the project with
+
+    ```sh
+    npm run dev
+    ```
+
+    This will start the development server at http://localhost:5173/.
+
+9. Open your browser and navigate to the above URL. You should see the chat component running.
+
+In the screenshot below, you can see how the chat component appears in the browser.
+<div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', margin: '20px 0', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.1)' }}>
+<Image src="/chat-component.png" alt="chat component" width={300} height={300} />
+</div>
