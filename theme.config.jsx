@@ -1,4 +1,5 @@
 export default {
+  docsRepositoryBase: 'https://github.com/dappros/ethora-docs',
   project: {
     link: 'https://github.com/dappros/ethora'
   },
