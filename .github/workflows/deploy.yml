@@ -30,7 +30,7 @@ jobs:
           EC2_USER: ${{ secrets.EC2_USER }}
           EC2_KEY: ${{ secrets.EC2_KEY }}
         run: |
-          ssh -i $EC2_KEY $EC2_USER@$EC2_HOST << 'EOF'
+          ssh -o StrictHostKeyChecking=no -i $EC2_KEY $EC2_USER@$EC2_HOST << 'EOF'
             cd /home/ubuntu/ethora-docs
             chmod +x deploy.sh
             ./deploy.sh
